@@ -48,21 +48,16 @@ def run(songs)
   puts "Please enter a command:"
     while true do
       users_response = gets.chomp
-      break if users_response == "exit"
-      puts "Please enter a command:"
-    end
-
-    until users_response == "exit" do
-      puts "Please enter a command:"
-      users_response
-    end
       if users_response == "help"
         help
       elsif users_response == "list"
-        list(songs)
+        list(my_songs)
       elsif users_response == "play"
-        play(songs)
+        play(my_songs)
       elsif users_response == "exit"
         exit_jukebox
       end
+      break if users_response == "exit"
+      puts "Please enter a command:"
+    end
 end

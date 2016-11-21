@@ -46,18 +46,17 @@ end
 def run(songs)
   help
   puts "Please enter a command:"
-    while true do
-      users_response = gets.chomp
-      if users_response == "help"
-        help
-      elsif users_response == "list"
-        list(my_songs)
-      elsif users_response == "play"
-        play(my_songs)
-      elsif users_response == "exit"
-        exit_jukebox
-      end
-      break if users_response == "exit"
+  while users_response = gets.chomp
+    if users_response == "help"
+      help
+    elsif users_response == "list"
+      list(songs)
+    elsif users_response == "play"
+      play(songs)
+    elsif users_response == "exit"
+      exit_jukebox
+    end
+    break if users_response == "exit"
       puts "Please enter a command:"
     end
 end

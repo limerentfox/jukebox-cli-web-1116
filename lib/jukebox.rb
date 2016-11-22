@@ -58,5 +58,5 @@ def run(songs)
     end
     break if users_response == "exit"
       puts "Please enter a command:"
-    end
+  end
 end

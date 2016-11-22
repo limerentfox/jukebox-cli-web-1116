@@ -35,10 +35,12 @@ def play(my_songs)
     my_songs.each do |k, v|
       if users_response == k
         system %{open "#{v}"}
-      else
-        puts "Invalid input, please try again"
+        return
       end
+
+
     end
+    puts "Invalid input, please try again"
 end
 
 
